@@ -11,7 +11,7 @@ from rotas.usuario_routes import usuario_bp
 app = Flask(__name__)
 app.config.from_object(config["desenvolvimento"])
 
-CORS(app)  # libera acesso ao Flutter
+CORS(app, resources={r"/*": {"origins": "*"}})  #Aplicar o CORS a todas as rotas, permitindo as origens diferentes acessar a WebApi
 
 # registrando as rotas
 app.register_blueprint(usuario_bp)
