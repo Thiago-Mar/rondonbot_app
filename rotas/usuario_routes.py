@@ -7,7 +7,7 @@ usuario_bp = Blueprint("usuario", __name__)
 # ============================================================
 # CADASTRAR USUÁRIO (CREATE)
 # ============================================================
-@usuario_bp.route('/cadastrar', methods=['POST'])
+@usuario_bp.route("/cadastrar", methods=['POST'])
 def cadastrar_usuario():
     data = request.get_json()
 
